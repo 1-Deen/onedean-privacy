@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OneDean Privacy Policy</title>
+<style>
+  :root {
+    --bg: #F4ECD8;
+    --surface: #EAE0C7;
+    --border: #D7C7A0;
+    --text: #3E2723;
+    --text-muted: #6B5644;
+    --accent: #A0522D;
+    --accent-soft: rgba(160, 82, 45, 0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1C1712;
+      --surface: #241D16;
+      --border: #3A2E22;
+      --text: #EDE3CD;
+      --text-muted: #C2B190;
+      --accent: #D68A54;
+      --accent-soft: rgba(214, 138, 84, 0.14);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .mark svg { width: 18px; height: 18px; flex: none; }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 600;
+    margin: 4px 0 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .arabic-sub {
+    font-size: 19px;
+    color: var(--text-muted);
+    direction: rtl;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin-top: 6px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .divider {
+    height: 10px;
+    margin: 8px 0 40px;
+    background-image: linear-gradient(45deg, var(--border) 25%, transparent 25%, transparent 75%, var(--border) 75%),
+                       linear-gradient(45deg, var(--border) 25%, transparent 25%, transparent 75%, var(--border) 75%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+    opacity: 0.55;
+    mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  }
+
+  .lede {
+    font-size: 17.5px;
+    color: var(--text);
+    margin: 0 0 44px;
+    max-width: 62ch;
+  }
+
+  section.doc-section {
+    padding: 28px 0;
+    border-top: 1px solid var(--border);
+  }
+  section.doc-section:last-of-type { border-bottom: 1px solid var(--border); }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+  }
+
+  .section-num {
+    font-family: Georgia, "Iowan Old Style", serif;
+    font-size: 14px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-variant-numeric: tabular-nums;
+    flex: none;
+  }
+
+  h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .doc-section p, .doc-section li {
+    max-width: 65ch;
+    color: var(--text);
+  }
+  .doc-section p { margin: 0 0 14px; }
+  .doc-section p:last-child { margin-bottom: 0; }
+
+  .doc-section ul {
+    margin: 0 0 14px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .doc-section ul:last-child { margin-bottom: 0; }
+  .doc-section li::marker { color: var(--accent); }
+
+  strong { font-weight: 600; }
+
+  .table-wrap { overflow-x: auto; margin: 4px 0 16px; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 14px 9px 0;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+
+  footer.doc-foot {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  footer.doc-foot a { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 480px) {
+    .page { padding: 44px 18px 72px; }
+    .divider { margin-bottom: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="doc-head">
+    <div class="mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M4 17.5A2.5 2.5 0 0 1 6.5 15H20"/></svg>
+      OneDean &middot; Privacy Policy
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="arabic-sub">دين واحد</div>
+    <div class="meta">
+      <span>Effective July 22, 2026</span>
+      <span>&middot;</span>
+      <span>Applies to OneDean for Android (com.onedean.app)</span>
+    </div>
+  </header>
+
+  <div class="divider" role="presentation"></div>
+
+  <p class="lede">
+    OneDean is a Quran, prayer-time, and daily-worship companion app. This page explains, in plain terms,
+    what the app accesses on your device, where that information goes, and what stays local. There is no
+    account system, no advertising, and no analytics or crash-tracking SDK anywhere in the app.
+  </p>
+
+  <section class="doc-section" id="location">
+    <div class="section-head"><span class="section-num">01</span><h2>Location</h2></div>
+    <p>
+      If you grant location access, OneDean uses your device's coordinates to calculate accurate prayer
+      times, point the Qibla compass toward the Kaaba, show local weather, and find nearby mosques.
+    </p>
+    <p>
+      Your coordinates are sent directly from your device to the prayer-time and weather providers listed
+      in the table below &mdash; we do not run a server of our own that receives, stores, or logs your location.
+      Location is requested only when a screen that needs it is open, and you can revoke access at any time
+      in your device's Settings without losing access to the rest of the app.
+    </p>
+  </section>
+
+  <section class="doc-section" id="fitness">
+    <div class="section-head"><span class="section-num">02</span><h2>Physical activity &amp; step data</h2></div>
+    <p>
+      The step counter, exercise graphs, and star rewards are powered by <strong>Google Fit</strong>. This
+      data is only read after you explicitly sign in with your Google account and approve access &mdash;
+      OneDean never reads fitness data silently in the background before that consent is given.
+    </p>
+    <p>
+      Step history is stored locally on your device. If you use the "Export to Excel" feature, that file is
+      written to your device's own storage; it is never uploaded to us. Signing out of Google Fit (via your
+      device's Google account settings) stops all access immediately.
+    </p>
+  </section>
+
+  <section class="doc-section" id="notifications">
+    <div class="section-head"><span class="section-num">03</span><h2>Notifications</h2></div>
+    <p>
+      Notification and exact-alarm permissions are used solely to schedule local reminders on your device
+      &mdash; prayer-time alerts and a daily hadith. These reminders are generated and delivered entirely on
+      your device; no notification content or scheduling data is sent anywhere.
+    </p>
+  </section>
+
+  <section class="doc-section" id="local-data">
+    <div class="section-head"><span class="section-num">04</span><h2>Data stored on your device</h2></div>
+    <p>Settings, bookmarks, reading position, downloaded content, and step history are kept in local app storage. This never leaves your device except through an export action you initiate yourself. Uninstalling OneDean permanently deletes all of it.</p>
+  </section>
+
+  <section class="doc-section" id="third-parties">
+    <div class="section-head"><span class="section-num">05</span><h2>Third-party services</h2></div>
+    <p>OneDean talks to the following services to do its job. Each is governed by its own privacy policy, which we don't control.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Used for</th><th>Data involved</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Play Services (Location, Fit, Sign-In)</td><td>Location, step data, sign-in</td><td>Coordinates, fitness data, Google account</td></tr>
+          <tr><td>IslamicAPI.com</td><td>Prayer time calculation</td><td>Coordinates</td></tr>
+          <tr><td>Open-Meteo</td><td>Weather &amp; city search</td><td>Coordinates, search text</td></tr>
+          <tr><td>Cloudflare R2 (our storage)</td><td>Quran, Hadith, Tajweed, Dhikr, Du'a &amp; Names content</td><td>None &mdash; content download only</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>All connections use HTTPS. <span class="pill">No advertising SDKs</span> <span class="pill">No analytics SDKs</span></p>
+  </section>
+
+  <section class="doc-section" id="sharing">
+    <div class="section-head"><span class="section-num">06</span><h2>What we don't do</h2></div>
+    <ul>
+      <li>We don't sell or rent your data to anyone.</li>
+      <li>We don't share your data for advertising or marketing.</li>
+      <li>We don't operate a backend that stores your location or health data.</li>
+      <li>We don't require an account to use the Quran, prayer times, or reading features.</li>
+    </ul>
+  </section>
+
+  <section class="doc-section" id="children">
+    <div class="section-head"><span class="section-num">07</span><h2>Children's privacy</h2></div>
+    <p>OneDean is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+  </section>
+
+  <section class="doc-section" id="changes">
+    <div class="section-head"><span class="section-num">08</span><h2>Changes to this policy</h2></div>
+    <p>If this policy changes, the effective date at the top of this page will be updated. Continued use of OneDean after a change means you accept the revised policy.</p>
+  </section>
+
+  <footer class="doc-foot">
+    <div>OneDean &middot; دين واحد</div>
+    <div>Last updated July 22, 2026</div>
+  </footer>
+</div>
+
+</body>
+</html>
