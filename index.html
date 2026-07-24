@@ -150,14 +150,14 @@
   .doc-section p { margin: 0 0 14px; }
   .doc-section p:last-child { margin-bottom: 0; }
 
-  .doc-section ul {
+  .doc-section ul, .doc-section ol {
     margin: 0 0 14px;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
-  .doc-section ul:last-child { margin-bottom: 0; }
+  .doc-section ul:last-child, .doc-section ol:last-child { margin-bottom: 0; }
   .doc-section li::marker { color: var(--accent); }
 
   strong { font-weight: 600; }
@@ -314,8 +314,32 @@
     <p>OneDean is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
   </section>
 
+  <section class="doc-section" id="account-deletion">
+    <div class="section-head"><span class="section-num">08</span><h2>Account &amp; data deletion</h2></div>
+    <p>
+      OneDean does not create or store its own user accounts. The only account-linked feature is optional
+      Google Sign-In, used solely to read your step count from Google Fit.
+    </p>
+    <p>To remove OneDean's access to your Google account:</p>
+    <ol>
+      <li>Go to <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a> (Google Account &rarr; Data &amp; privacy &rarr; Linked apps)</li>
+      <li>Find <strong>OneDean</strong> in the list</li>
+      <li>Select it, then choose to remove access</li>
+    </ol>
+    <p>
+      This immediately and permanently revokes OneDean's ability to read your Google Fit data. We do not
+      retain any copy of this data on our servers &mdash; there is no backend database of user data to
+      delete, since all app data is stored locally on your device.
+    </p>
+    <p>
+      To delete all locally stored data (steps, bookmarks, settings, reading position): uninstall the app.
+      This removes everything OneDean has stored on your device immediately, with no retention period,
+      since nothing is kept elsewhere.
+    </p>
+  </section>
+
   <section class="doc-section" id="changes">
-    <div class="section-head"><span class="section-num">08</span><h2>Changes to this policy</h2></div>
+    <div class="section-head"><span class="section-num">09</span><h2>Changes to this policy</h2></div>
     <p>If this policy changes, the effective date at the top of this page will be updated. Continued use of OneDean after a change means you accept the revised policy.</p>
   </section>
 
