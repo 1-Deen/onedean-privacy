@@ -224,7 +224,7 @@
     <h1>Privacy Policy</h1>
     <div class="arabic-sub">دين واحد</div>
     <div class="meta">
-      <span>Effective July 22, 2026</span>
+      <span>Effective July 26, 2026</span>
       <span>&middot;</span>
       <span>Applies to OneDean for Android (com.onedean.app)</span>
     </div>
@@ -255,14 +255,21 @@
   <section class="doc-section" id="fitness">
     <div class="section-head"><span class="section-num">02</span><h2>Physical activity &amp; step data</h2></div>
     <p>
-      The step counter, exercise graphs, and star rewards are powered by <strong>Google Fit</strong>. This
-      data is only read after you explicitly sign in with your Google account and approve access &mdash;
-      OneDean never reads fitness data silently in the background before that consent is given.
+      The step counter, exercise graphs, and star rewards read your daily step count through
+      <strong>Android Health Connect</strong>, Google's on-device successor to Google Fit. Access is only
+      read after you explicitly approve it on the Health Connect permission screen &mdash; OneDean never
+      reads step data before that consent is given, and no Google account or sign-in is required.
+    </p>
+    <p>
+      If Health Connect isn't available or connected, OneDean falls back to your phone's own hardware
+      step-counter sensor, then its motion sensor &mdash; both entirely on-device, with no external service
+      involved either way.
     </p>
     <p>
       Step history is stored locally on your device. If you use the "Export to Excel" feature, that file is
-      written to your device's own storage; it is never uploaded to us. Signing out of Google Fit (via your
-      device's Google account settings) stops all access immediately.
+      written to your device's own storage; it is never uploaded to us. You can revoke step access at any
+      time in Android Settings &rarr; Health Connect &rarr; App permissions, or Android Settings &rarr; Apps
+      &rarr; OneDean &rarr; Permissions.
     </p>
   </section>
 
@@ -289,7 +296,8 @@
           <tr><th>Service</th><th>Used for</th><th>Data involved</th></tr>
         </thead>
         <tbody>
-          <tr><td>Google Play Services (Location, Fit, Sign-In)</td><td>Location, step data, sign-in</td><td>Coordinates, fitness data, Google account</td></tr>
+          <tr><td>Google Play Services (Location)</td><td>Location</td><td>Coordinates</td></tr>
+          <tr><td>Android Health Connect</td><td>Step data</td><td>Daily step count &mdash; stays on-device, not transmitted to us or Google</td></tr>
           <tr><td>IslamicAPI.com</td><td>Prayer time calculation</td><td>Coordinates</td></tr>
           <tr><td>Open-Meteo</td><td>Weather &amp; city search</td><td>Coordinates, search text</td></tr>
           <tr><td>Cloudflare R2 (our storage)</td><td>Quran, Hadith, Tajweed, Dhikr, Du'a &amp; Names content</td><td>None &mdash; content download only</td></tr>
@@ -317,19 +325,18 @@
   <section class="doc-section" id="account-deletion">
     <div class="section-head"><span class="section-num">08</span><h2>Account &amp; data deletion</h2></div>
     <p>
-      OneDean does not create or store its own user accounts. The only account-linked feature is optional
-      Google Sign-In, used solely to read your step count from Google Fit.
+      OneDean does not create or store its own user accounts, and no Google account or sign-in is required
+      for any feature, including step tracking.
     </p>
-    <p>To remove OneDean's access to your Google account:</p>
+    <p>To remove OneDean's access to your step data:</p>
     <ol>
-      <li>Go to <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">myaccount.google.com/connections</a> (Google Account &rarr; Data &amp; privacy &rarr; Linked apps)</li>
-      <li>Find <strong>OneDean</strong> in the list</li>
-      <li>Select it, then choose to remove access</li>
+      <li>Open Android Settings &rarr; Health Connect &rarr; App permissions &rarr; OneDean, and turn off Steps</li>
+      <li>Or open Android Settings &rarr; Apps &rarr; OneDean &rarr; Permissions, and revoke Physical activity</li>
     </ol>
     <p>
-      This immediately and permanently revokes OneDean's ability to read your Google Fit data. We do not
-      retain any copy of this data on our servers &mdash; there is no backend database of user data to
-      delete, since all app data is stored locally on your device.
+      This immediately and permanently stops OneDean from reading your step data. We do not retain any copy
+      of this data on our servers &mdash; there is no backend database of user data to delete, since all app
+      data is stored locally on your device.
     </p>
     <p>
       To delete all locally stored data (steps, bookmarks, settings, reading position): uninstall the app.
@@ -345,7 +352,7 @@
 
   <footer class="doc-foot">
     <div>OneDean &middot; دين واحد</div>
-    <div>Last updated July 22, 2026</div>
+    <div>Last updated July 26, 2026</div>
   </footer>
 </div>
 
